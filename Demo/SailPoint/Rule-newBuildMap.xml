@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE sailpoint PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<sailpoint><Rule language="beanshell" name="New Build Map" type="BuildMap">
+  <Description>This rule is used by the delimited file connector to build a map
+        representation of the delimited data.</Description>
+<Signature returnType="Map">
+<Inputs>
+<Argument type="application">
+<Description>
+The application whose data file is being processed.
+</Description>
+</Argument><Argument type="schema">
+<Description>
+The Schema currently in use.
+</Description>
+</Argument><Argument type="state">
+<Description>
+A Map containing state information.
+</Description>
+</Argument><Argument type="record">
+<Description>
+A List of data tokens parsed from the current line of the data
+              file.
+</Description>
+</Argument><Argument type="cols">
+<Description>
+A List of the columns to use.
+</Description>
+</Argument></Inputs>
+<Returns>
+<Argument type="map">
+<Description>
+A Map of the resource object assembled from the data.
+</Description>
+</Argument></Returns>
+</Signature>
+<!--ReferencedRules>
+  <Reference class="sailpoint.object.Rule" name=""/>
+</ReferencedRules-->
+  <Source><![CDATA[
+/*******
+ *                                                                             *
+ * Generated: Thu Nov 28 16:29:11 IST 2019                                     *
+ * Rule: Build Map Template                                                    *
+ * Description: Build Map Template                                             *
+ * Inputs:                                                                     *
+ *     application - The application whose data file is being processed.       *
+ *     schema - The Schema currently in use.                                   *
+ *     state - A Map containing state information.                             *
+ *     record - A List of data tokens parsed from the current line of the data *
+ *               file.                                                         *
+ *     cols - A List of the columns to use.                                    *
+ * Returns:                                                                    *
+ *     map - A Map of the resource object assembled from the data.             *
+ ******/
+serilog=org.apache.commons.logging.LogFactory.getLog("SERI.Rule.buildMapTemplate");
+serilog.debug("----Rule Start----");
+  ]]></Source>
+</Rule>
+</sailpoint>
